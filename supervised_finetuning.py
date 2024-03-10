@@ -80,6 +80,7 @@ MODEL_CLASSES = {
     "auto": (AutoConfig, AutoModelForCausalLM, AutoTokenizer),
 }
 
+
 @dataclass
 class ModelArguments:
     """
@@ -997,6 +998,7 @@ def main():
         "cache_dir": model_args.cache_dir,
         "use_fast": model_args.use_fast_tokenizer,
         "trust_remote_code": model_args.trust_remote_code,
+        "token": model_args.hf_hub_token,
     }
     tokenizer_name_or_path = model_args.tokenizer_name_or_path
     if not tokenizer_name_or_path:
