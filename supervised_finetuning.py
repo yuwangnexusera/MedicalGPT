@@ -79,7 +79,10 @@ MODEL_CLASSES = {
     "baichuan": (AutoConfig, AutoModelForCausalLM, AutoTokenizer),
     "auto": (AutoConfig, AutoModelForCausalLM, AutoTokenizer),
 }
+import os
 
+# 设置Hugging Face的access_token到环境变量
+os.environ["HF_HOME"] = "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"
 
 @dataclass
 class ModelArguments:
